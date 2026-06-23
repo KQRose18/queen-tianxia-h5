@@ -1,5 +1,5 @@
 const STORAGE_KEY = "queen-tianxia-shortdrama-mvp-v3";
-const ASSET_VERSION = "20260623-181511";
+const ASSET_VERSION = "20260623-184814";
 
 const audioManifest = {
   bgm: {
@@ -642,7 +642,7 @@ function unlockAudio() {
   audioUnlocked = true;
   Object.entries(audioManifest.sfx).forEach(([key, src]) => {
     const audio = new Audio(src);
-    audio.preload = "auto";
+    audio.preload = "none";
     audio.addEventListener("error", () => {
       delete sfxPool[key];
     }, { once: true });
