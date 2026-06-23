@@ -1,5 +1,5 @@
 const STORAGE_KEY = "queen-tianxia-shortdrama-mvp-v3";
-const ASSET_VERSION = "20260623-172049";
+const ASSET_VERSION = "20260623-175242";
 
 const audioManifest = {
   bgm: {
