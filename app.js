@@ -1,5 +1,5 @@
 const STORAGE_KEY = "queen-tianxia-shortdrama-mvp-v3";
-const ASSET_VERSION = "20260623-art-branch-map";
+const ASSET_VERSION = "20260623-voice-lines-4";
 
 const audioManifest = {
   bgm: {
@@ -134,9 +134,10 @@ const storyChapters = {
       name: "初遇",
       cg: { image: "assets/story/strips/shen_story_01_strip.webp", position: "center center", size: "auto 100%" },
       line: "首辅大人，怎么，见到朕不行礼？",
+      voiceLine: "臣只是怕看久了，会忘了礼数。",
       choices: [
-        { text: "抬眼看他", favor: 10, reply: "沈砚指尖一顿，低声说：臣只是怕看久了，会忘了礼数。" },
-        { text: "敲敲奏折", favor: 6, reply: "沈砚笑意很浅：陛下终于知道，臣比奏折更难批。" }
+        { text: "抬眼看他", favor: 10, reply: "沈砚指尖一顿，低声说：臣只是怕看久了，会忘了礼数。", voiceLine: "臣只是怕看久了，会忘了礼数。" },
+        { text: "敲敲奏折", favor: 6, reply: "沈砚笑意很浅：陛下终于知道，臣比奏折更难批。", voiceLine: "陛下终于知道，臣比奏折更难批。" }
       ]
     },
     {
@@ -144,17 +145,18 @@ const storyChapters = {
       cg: { image: "assets/story/strips/shen_story_02_strip.webp", position: "center center", size: "auto 100%" },
       line: "臣替陛下看过账册。国库亏空不难补，难补的是人心。",
       choices: [
-        { text: "那你补朕的人心", favor: 12, reply: "沈砚垂眸：陛下这句话，臣会记一整夜。" },
-        { text: "先补国库", favor: 7, reply: "他把朱笔递来：陛下会算账，臣便放心一半。" }
+        { text: "那你补朕的人心", favor: 12, reply: "沈砚垂眸：陛下这句话，臣会记一整夜。", voiceLine: "陛下这句话，臣会记一整夜。" },
+        { text: "先补国库", favor: 7, reply: "他把朱笔递来：陛下会算账，臣便放心一半。", voiceLine: "陛下会算账，臣便放心一半。" }
       ]
     },
     {
       name: "失礼",
       cg: { image: "assets/story/strips/shen_story_03_strip.webp", position: "center center", size: "auto 100%" },
       line: "烛火忽然灭了一半。沈砚扶住你按在奏折上的手，声音仍稳：奏折重要，可臣现在更想犯一次失礼。",
+      voiceLine: "奏折重要，可臣现在更想犯一次失礼。",
       choices: [
-        { text: "不许退", favor: 18, reply: "他指尖一紧，低声道：陛下再这样命令，臣真的会忘了君臣。" },
-        { text: "松手", favor: 10, reply: "沈砚立刻退开，却把外袍披到你肩上：臣松手，但心还跪在这里。" }
+        { text: "不许退", favor: 18, reply: "他指尖一紧，低声道：陛下再这样命令，臣真的会忘了君臣。", voiceLine: "陛下再这样命令，臣真的会忘了君臣。" },
+        { text: "松手", favor: 10, reply: "沈砚立刻退开，却把外袍披到你肩上：臣松手，但心还跪在这里。", voiceLine: "臣松手，但心还跪在这里。" }
       ]
     },
     {
@@ -162,26 +164,28 @@ const storyChapters = {
       cg: { image: "assets/story/strips/shen_story_04_strip.webp", position: "center center", size: "auto 100%" },
       line: "若有一日，臣与天下相悖，陛下选谁？",
       choices: [
-        { text: "先选你，再夺天下", favor: 16, reply: "沈砚眼底暗潮翻涌：这才像臣的女王。" },
-        { text: "选天下", favor: 6, reply: "他笑得温顺：陛下英明。只是臣会嫉妒。" }
+        { text: "先选你，再夺天下", favor: 16, reply: "沈砚眼底暗潮翻涌：这才像臣的女王。", voiceLine: "这才像臣的女王。" },
+        { text: "选天下", favor: 6, reply: "他笑得温顺：陛下英明。只是臣会嫉妒。", voiceLine: "陛下英明。只是臣会嫉妒。" }
       ]
     },
     {
       name: "污名",
       cg: { image: "assets/story/strips/shen_story_05_strip.webp", fallback: "assets/story/strips/shen_story_04_strip.webp", position: "center center", size: "auto 100%" },
       line: "百官跪在殿前逼你交出账册，沈砚却先一步认下所有罪名。夜里他回到御书房，外袍半湿，衣领被雨扯开一线，仍隔着案几问你：陛下，要臣替您脏到哪一步？",
+      voiceLine: "陛下，要臣替您脏到哪一步？",
       choices: [
-        { text: "不许他认罪", favor: 18, reply: "沈砚轻轻摇头，握住你按在账册上的手背：陛下干净，臣才有资格站在您身边。骂名这种东西，臣来背。" },
-        { text: "把账册交给他", favor: 14, reply: "他指腹擦过账册边缘，低声道：臣接了。往后朝堂骂臣，陛下只管赢。" }
+        { text: "不许他认罪", favor: 18, reply: "沈砚轻轻摇头，握住你按在账册上的手背：陛下干净，臣才有资格站在您身边。骂名这种东西，臣来背。", voiceLine: "陛下干净，臣才有资格站在您身边。骂名这种东西，臣来背。" },
+        { text: "把账册交给他", favor: 14, reply: "他指腹擦过账册边缘，低声道：臣接了。往后朝堂骂臣，陛下只管赢。", voiceLine: "臣接了。往后朝堂骂臣，陛下只管赢。" }
       ]
     },
     {
       name: "不让",
       cg: { image: "assets/story/strips/shen_story_06_strip.webp", fallback: "assets/story/strips/shen_story_04_strip.webp", position: "center center", size: "auto 100%" },
       line: "夜半御书房只剩一盏灯。沈砚跪在你案前，终于失了从容：我愿替陛下背万世骂名，但陛下不能把我也推给天下。",
+      voiceLine: "我愿替陛下背万世骂名，但陛下不能把我也推给天下。",
       choices: [
-        { text: "抬起他的下巴", favor: 20, reply: "他眼尾微红，却顺着你的指尖抬头：臣可以做陛下最干净的刀，也可以做最脏的影子。唯独不能做旁人。" },
-        { text: "问他想要什么", favor: 18, reply: "沈砚低声笑了一下：臣想要陛下每一次回头，都先看见臣。" }
+        { text: "抬起他的下巴", favor: 20, reply: "他眼尾微红，却顺着你的指尖抬头：臣可以做陛下最干净的刀，也可以做最脏的影子。唯独不能做旁人。", voiceLine: "臣可以做陛下最干净的刀，也可以做最脏的影子。唯独不能做旁人。" },
+        { text: "问他想要什么", favor: 18, reply: "沈砚低声笑了一下：臣想要陛下每一次回头，都先看见臣。", voiceLine: "臣想要陛下每一次回头，都先看见臣。" }
       ]
     }
   ],
@@ -487,15 +491,38 @@ const introSlides = [
   },
   {
     imageClass: "opening-1",
-    html: "<p>陛下登基第一年。</p><p>国库空虚，边关不稳，朝中暗流涌动。</p><p>而后宫，也并不安宁。</p>"
+    html: "<p>陛下登基第一年。</p><p>国库空虚，边关不稳，朝中暗流涌动。</p><p>而后宫，也并不安宁。</p>",
+    narration: [
+      "陛下登基第一年。",
+      "国库空虚。边关不稳。",
+      "朝中暗流涌动。而后宫，也并不安宁。",
+      "这一年，所有人都在等陛下做出选择。"
+    ]
   },
   {
     imageClass: "opening-2",
-    html: "<strong>沈砚</strong><p>陛下。</p><p>臣等了您很久。</p>"
+    html: "<strong>沈砚</strong><p>陛下。</p><p>臣等了您很久。</p>",
+    narration: [
+      "有人跪在殿前，等一道诏令。",
+      "有人藏在雨夜，等一次回头。",
+      "有人把真心，藏进账册。",
+      "有人把刀锋，交到陛下手里。"
+    ]
   },
   {
     imageClass: "opening-3",
-    html: "<strong>沈砚</strong><p>既然来了。</p><p>臣教您怎么当好这个女王。</p>"
+    html: "<strong>沈砚</strong><p>既然来了。</p><p>臣教您怎么当好这个女王。</p>",
+    narration: [
+      "财富不是终点。只是打开命运的钥匙。",
+      "朝局每月更替。风闻暗藏机会。",
+      "市场涨跌无常。胆识决定国库厚薄。",
+      "一道诏令，可以安民，也可以树敌。",
+      "一场交易，可以暴富，也可能误判。",
+      "当财富，权势，魅力与威望，累积到极致。",
+      "新的命运，便会出现。",
+      "请陛下入局。",
+      "这一局，天下与真心，都在等您亲手赢下。"
+    ]
   }
 ];
 
@@ -509,6 +536,7 @@ let storyUnlockTimer = null;
 let preferredTtsVoice = null;
 let ttsAudioManifest = {};
 let activeVoiceAudio = null;
+let narrationToken = 0;
 const sfxPool = {};
 
 const $ = (selector) => document.querySelector(selector);
@@ -603,6 +631,7 @@ async function loadTtsAudioManifest() {
     const response = await fetch(`assets/voice/manifest.json?v=${ASSET_VERSION}`);
     if (!response.ok) return;
     ttsAudioManifest = await response.json();
+    updateTtsToggleLabel();
   } catch {
     ttsAudioManifest = {};
   }
@@ -681,9 +710,23 @@ function setBgmMuted(muted) {
 
 function setTtsEnabled(enabled) {
   state.ttsEnabled = enabled;
-  $("#ttsToggleBtn").textContent = enabled ? "语音开" : "语音关";
+  updateTtsToggleLabel();
   if (!enabled) stopTts();
   saveState();
+}
+
+function hasTtsAudioFiles() {
+  return Object.keys(ttsAudioManifest || {}).length > 0;
+}
+
+function updateTtsToggleLabel() {
+  const button = $("#ttsToggleBtn");
+  if (!button) return;
+  if (!state.ttsEnabled) {
+    button.textContent = "语音关";
+    return;
+  }
+  button.textContent = hasTtsAudioFiles() ? "真人语音开" : "语音开";
 }
 
 function initTtsVoice() {
@@ -707,6 +750,7 @@ function ttsProfile(name) {
 }
 
 function stopTts() {
+  narrationToken += 1;
   if (activeVoiceAudio) {
     activeVoiceAudio.pause();
     activeVoiceAudio.currentTime = 0;
@@ -716,38 +760,92 @@ function stopTts() {
   window.speechSynthesis.cancel();
 }
 
+function voiceFallbackRoleDir(name) {
+  return {
+    "沈砚": "shen",
+    "萧照": "xiao",
+    "容与": "rong",
+    "谢长离": "xie",
+    "裴无咎": "pei"
+  }[name] || "";
+}
+
+function stableVoiceIndex(name, line, length) {
+  if (!length) return 0;
+  let h = 2166136261;
+  const text = `${name}|${line}`;
+  for (const ch of text) {
+    h ^= ch.codePointAt(0);
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  return h % length;
+}
+
+function shouldUseFallbackVoice(line) {
+  return !line.includes("朕");
+}
+
+function getFallbackVoiceSrc(name, line) {
+  if (!shouldUseFallbackVoice(line)) return "";
+  const roleDir = voiceFallbackRoleDir(name);
+  if (!roleDir) return "";
+  const pool = Object.values(ttsAudioManifest || {})
+    .filter((src) => src.includes(`/generated/${roleDir}/`))
+    .sort();
+  return pool[stableVoiceIndex(name, line, pool.length)] || "";
+}
+
 function playTtsAudioFile(name, line) {
-  const src = ttsAudioManifest[voiceKey(name, line)];
+  const candidates = [line];
+  const colonIndex = Math.max(line.lastIndexOf("："), line.lastIndexOf(":"));
+  if (colonIndex >= 0 && colonIndex < line.length - 1) {
+    candidates.push(line.slice(colonIndex + 1).trim());
+  }
+  const quoteMatch = line.match(/[“"「](.+?)[”"」]/);
+  if (quoteMatch) candidates.push(quoteMatch[1].trim());
+  const exactSrc = candidates.map((item) => ttsAudioManifest[voiceKey(name, item)]).find(Boolean);
+  const src = exactSrc || getFallbackVoiceSrc(name, line);
   if (!src) return false;
   stopTts();
   activeVoiceAudio = new Audio(src);
-  activeVoiceAudio.volume = 0.96;
-  activeVoiceAudio.play().catch(() => speakBrowserTts(name, line));
+  activeVoiceAudio.volume = name === "旁白" ? 0.92 : 0.96;
+  activeVoiceAudio.play().then(() => {
+    if (name !== "旁白") showToast(`${name} 真人语音播放中`, 2400);
+  }).catch(() => {});
   return true;
 }
-
 function speakLine(name, line) {
   if (!state.ttsEnabled) return;
-  if (playTtsAudioFile(name, line)) return;
-  speakBrowserTts(name, line);
+  playTtsAudioFile(name, line);
+}
+
+function playNarrationQueue(lines = []) {
+  narrationToken += 1;
+  const token = narrationToken;
+  if (!state.ttsEnabled || !lines.length) return;
+  const playNext = (index) => {
+    if (token !== narrationToken || index >= lines.length) return;
+    const src = ttsAudioManifest[voiceKey("旁白", lines[index])];
+    if (!src) {
+      playNext(index + 1);
+      return;
+    }
+    if (activeVoiceAudio) {
+      activeVoiceAudio.pause();
+      activeVoiceAudio.currentTime = 0;
+    }
+    activeVoiceAudio = new Audio(src);
+    activeVoiceAudio.volume = 0.92;
+    activeVoiceAudio.onended = () => playNext(index + 1);
+    activeVoiceAudio.onerror = () => playNext(index + 1);
+    activeVoiceAudio.play().catch(() => {});
+  };
+  playNext(0);
 }
 
 function speakBrowserTts(name, line) {
-  if (!("speechSynthesis" in window)) return;
-  const cleanLine = line.replace(/[“”"「」]/g, "").replace(/\s+/g, " ").trim();
-  if (!cleanLine) return;
-  stopTts();
-  initTtsVoice();
-  const utterance = new SpeechSynthesisUtterance(cleanLine);
-  utterance.lang = preferredTtsVoice?.lang || "zh-CN";
-  utterance.voice = preferredTtsVoice;
-  const profile = ttsProfile(name);
-  utterance.rate = profile.rate;
-  utterance.pitch = profile.pitch;
-  utterance.volume = 0.92;
-  window.speechSynthesis.speak(utterance);
+  return false;
 }
-
 function ok(text) {
   return { ok: true, text };
 }
@@ -891,6 +989,7 @@ function nextIntro(event) {
     renderIntro();
     return;
   }
+  stopTts();
   $("#introScreen").classList.add("hidden");
   $("#gameScreen").classList.remove("hidden");
   playBgm("home");
@@ -931,7 +1030,7 @@ function showTab(tab) {
 
 function renderAll() {
   $("#audioToggleBtn").textContent = state.bgmMuted ? "音乐关" : "音乐开";
-  $("#ttsToggleBtn").textContent = state.ttsEnabled ? "语音开" : "语音关";
+  updateTtsToggleLabel();
   renderStatus();
   renderMarket();
   renderEdicts();
@@ -1228,15 +1327,15 @@ function startDate(id, spendResource = true, requestedChapter = getChapterIndex(
   const chapter = getChapter(id, chapterIndex);
   const choices = chapter.choices.map((choice) => ({
     text: choice.text,
-    action: () => finishChoice(id, choice.favor, choice.reply, chapterIndex)
+    action: () => finishChoice(id, choice.favor, choice.reply, chapterIndex, choice.voiceLine)
   }));
   playBgm(bgmForConsort(id));
-  openPlayer(consort.name, chapter.line, choices, chapterCg(id, chapterIndex));
+  openPlayer(consort.name, chapter.line, choices, chapterCg(id, chapterIndex), chapter.voiceLine || chapter.line);
   playSfx("story");
   renderAll();
 }
 
-function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id)) {
+function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id), voiceLine = null) {
   const consort = consorts.find((item) => item.id === id);
   lockPlayerChoices();
   const wasCurrent = chapterIndex >= getChapterIndex(id);
@@ -1272,6 +1371,7 @@ function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id)) {
   ];
   advanceStoryView(() => {
     updatePlayerDialog(consort.name, reply, followUpChoices);
+    if (voiceLine) speakLine(consort.name, voiceLine);
   });
 }
 
@@ -1353,7 +1453,7 @@ function checkUnlocks() {
   $("#unlockOverlay").classList.remove("hidden");
 }
 
-function openPlayer(name, line, choices, bg) {
+function openPlayer(name, line, choices, bg, voiceLine = line) {
   $("#playerName").textContent = name;
   $("#playerLine").textContent = line;
   const cg = typeof bg === "object" ? bg : { image: bg === "opening" ? "assets/story/opening-shen.webp" : "assets/story/date-shen.webp", position: "center 46%" };
@@ -1370,7 +1470,7 @@ function openPlayer(name, line, choices, bg) {
   $("#playerChoices").innerHTML = choices.map((choice, index) => `<button type="button" data-choice="${index}">${choice.text}</button>`).join("");
   playerCallback = choices;
   $("#storyPlayer").classList.remove("hidden");
-  speakLine(name, line);
+  if (voiceLine) speakLine(name, voiceLine);
 }
 
 function closePlayer() {
@@ -1409,7 +1509,6 @@ function updatePlayerDialog(name, line, choices) {
   $("#playerChoices").innerHTML = choices.map((choice, index) => `<button type="button" data-choice="${index}">${choice.text}</button>`).join("");
   playerCallback = choices;
   $("#storyPlayer").classList.remove("is-advancing");
-  speakLine(name, line);
 }
 
 function lockPlayerChoices() {
@@ -1431,11 +1530,15 @@ function advanceStoryView(done) {
 }
 
 function toast(message) {
+  showToast(message);
+}
+
+function showToast(message, duration = 1350) {
   const el = document.createElement("div");
   el.className = "toast";
   el.textContent = message;
   $("#toastLayer").appendChild(el);
-  setTimeout(() => el.remove(), 1350);
+  setTimeout(() => el.remove(), duration);
 }
 
 function showStoryUnlockBar(unlock) {

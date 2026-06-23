@@ -62,67 +62,432 @@
     }
   ],
   "shen_segments_found": 12,
+  "shen_story": [
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_001.wav",
+      "line": "臣只是怕看久了，会忘了礼数。",
+      "duration": 4.25
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_002.wav",
+      "line": "陛下终于知道，臣比奏折更难批。",
+      "duration": 5.6
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_003.wav",
+      "line": "臣替陛下看过账册。国库亏空不难补，难补的是人心。",
+      "duration": 8.87
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_004.wav",
+      "line": "陛下这句话，臣会记一整夜。",
+      "duration": 4.8
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_005.wav",
+      "line": "陛下会算账，臣便放心一半。",
+      "duration": 4.64
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_006.wav",
+      "line": "奏折重要，可臣现在更想犯一次失礼。",
+      "duration": 6.56
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_007.wav",
+      "line": "陛下再这样命令，臣真的会忘了君臣。",
+      "duration": 5.49
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_008.wav",
+      "line": "臣松手，但心还跪在这里。",
+      "duration": 5.9
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_009.wav",
+      "line": "若有一日，臣与天下相悖，陛下选谁？",
+      "duration": 6.86
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_010.wav",
+      "line": "这才像臣的女王。",
+      "duration": 2.85
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_011.wav",
+      "line": "陛下英明。只是臣会嫉妒。",
+      "duration": 5.0
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_012.wav",
+      "line": "陛下，要臣替您脏到哪一步？",
+      "duration": 4.91
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_013.wav",
+      "line": "陛下干净，臣才有资格站在您身边。骂名这种东西，臣来背。",
+      "duration": 9.43
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_014.wav",
+      "line": "臣接了。往后朝堂骂臣，陛下只管赢。",
+      "duration": 6.3
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_015.wav",
+      "line": "我愿替陛下背万世骂名，但陛下不能把我也推给天下。",
+      "duration": 6.4
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_016.wav",
+      "line": "臣可以做陛下最干净的刀，也可以做最脏的影子。唯独不能做旁人。",
+      "duration": 7.66
+    },
+    {
+      "file": "assets/voice/generated/shen_story/shen_story_017.wav",
+      "line": "臣想要陛下每一次回头，都先看见臣。",
+      "duration": 5.57
+    }
+  ],
+  "shen_story_segments_found": 17,
   "xiao": [
     {
       "file": "assets/voice/generated/xiao/xiao_001.wav",
       "line": "臣身上都是血，陛下还要靠近？",
-      "duration": 2.45
+      "duration": 5.69
     },
     {
       "file": "assets/voice/generated/xiao/xiao_002.wav",
       "line": "臣的命，早就是陛下的。",
-      "duration": 3.08
+      "duration": 4.92
     },
     {
       "file": "assets/voice/generated/xiao/xiao_003.wav",
       "line": "那臣只咬陛下的敌人。",
-      "duration": 2.18
+      "duration": 4.9
     },
     {
       "file": "assets/voice/generated/xiao/xiao_004.wav",
       "line": "满朝都说臣是疯犬。陛下也怕？",
-      "duration": 2.58
+      "duration": 5.35
     },
     {
       "file": "assets/voice/generated/xiao/xiao_005.wav",
       "line": "陛下若养得起，臣便只听陛下一人。",
-      "duration": 2.31
+      "duration": 5.52
     },
     {
       "file": "assets/voice/generated/xiao/xiao_006.wav",
       "line": "边关若乱，臣请为陛下先死。",
-      "duration": 2.43
+      "duration": 5.67
     },
     {
       "file": "assets/voice/generated/xiao/xiao_007.wav",
       "line": "臣的刀，只认陛下一人。",
-      "duration": 3.11
+      "duration": 4.89
     },
     {
       "file": "assets/voice/generated/xiao/xiao_008.wav",
       "line": "臣不怕死。臣只怕回来时，陛下身边已有别人。",
-      "duration": 2.08
+      "duration": 7.95
     },
     {
       "file": "assets/voice/generated/xiao/xiao_009.wav",
       "line": "若陛下不准臣死，臣就为陛下活着回来。",
-      "duration": 2.67
+      "duration": 5.51
     },
     {
       "file": "assets/voice/generated/xiao/xiao_010.wav",
       "line": "这身血不干净。可臣的心，是干净给陛下看的。",
-      "duration": 2.69
+      "duration": 7.33
     },
     {
       "file": "assets/voice/generated/xiao/xiao_011.wav",
       "line": "他们说臣疯。可臣只是在陛下面前，不想装得像个人。",
-      "duration": 2.38
+      "duration": 8.77
     },
     {
       "file": "assets/voice/generated/xiao/xiao_012.wav",
       "line": "陛下下令吧。臣愿替您踏平所有不臣之人。",
-      "duration": 3.13
+      "duration": 4.87
     }
   ],
-  "xiao_segments_found": 26
+  "xiao_segments_found": 12,
+  "rong": [
+    {
+      "file": "assets/voice/generated/rong/rong_001.wav",
+      "line": "一杯葡萄酒，换陛下一支舞。",
+      "duration": 4.6
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_002.wav",
+      "line": "臣早已投降，只等陛下接收。",
+      "duration": 5.03
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_003.wav",
+      "line": "只要陛下回头，臣就在。",
+      "duration": 4.77
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_004.wav",
+      "line": "这香只在故国王帐点燃。陛下闻见，会梦到臣。",
+      "duration": 7.09
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_005.wav",
+      "line": "若有一天，臣的旧国与陛下为敌呢？",
+      "duration": 5.38
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_006.wav",
+      "line": "陛下跳的是舞，臣失的是城池。",
+      "duration": 5.13
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_007.wav",
+      "line": "臣最爱赢家。尤其是陛下这样的赢家。",
+      "duration": 6.05
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_008.wav",
+      "line": "今夜月色很好。适合臣向陛下投降。",
+      "duration": 6.35
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_009.wav",
+      "line": "臣带来的葡萄酒不烈。烈的是陛下看臣的眼神。",
+      "duration": 6.9
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_010.wav",
+      "line": "陛下若要臣臣服，只需一句话。",
+      "duration": 5.71
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_011.wav",
+      "line": "陛下这样看臣，臣会以为，自己还有机会。",
+      "duration": 8.31
+    },
+    {
+      "file": "assets/voice/generated/rong/rong_012.wav",
+      "line": "故国万里，王帐千重。可臣想留的地方，只有陛下身边。",
+      "duration": 8.59
+    }
+  ],
+  "rong_segments_found": 12,
+  "xie": [
+    {
+      "file": "assets/voice/generated/xie/xie_001.wav",
+      "line": "陛下，和臣做一笔稳赚的买卖。",
+      "duration": 5.39
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_002.wav",
+      "line": "配不上，但臣很会赚。",
+      "duration": 4.71
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_003.wav",
+      "line": "成交。利润和心，都归陛下。",
+      "duration": 4.77
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_004.wav",
+      "line": "钱这种东西，最会替人说真话。",
+      "duration": 6.41
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_005.wav",
+      "line": "陛下信钱，还是信臣？",
+      "duration": 6.3
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_006.wav",
+      "line": "臣黑心，但不蠢。该赔给陛下的，一文都不会少。",
+      "duration": 6.28
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_007.wav",
+      "line": "亏是亏了，可臣愿意续约。",
+      "duration": 8.18
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_008.wav",
+      "line": "陛下真狠。那臣再赚一座金山，换您改口。",
+      "duration": 5.55
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_009.wav",
+      "line": "陛下这样，臣会以为自己比钱值钱。",
+      "duration": 5.4
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_010.wav",
+      "line": "果然是臣看上的买家，心狠，眼准，还要命。",
+      "duration": 6.14
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_011.wav",
+      "line": "成交。往后臣赚的每一文，都是陛下的退路。",
+      "duration": 8.04
+    },
+    {
+      "file": "assets/voice/generated/xie/xie_012.wav",
+      "line": "陛下这笔买卖，臣赔得心甘情愿。",
+      "duration": 8.89
+    }
+  ],
+  "xie_segments_found": 12,
+  "pei": [
+    {
+      "file": "assets/voice/generated/pei/pei_001.wav",
+      "line": "听说陛下很有钱。有人出十万两买您的人头。",
+      "duration": 3.13
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_002.wav",
+      "line": "若臣真想杀，陛下不会听见第二句话。",
+      "duration": 5.33
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_003.wav",
+      "line": "那得看陛下给不给臣名分。",
+      "duration": 4.43
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_004.wav",
+      "line": "这比刀更危险。",
+      "duration": 2.28
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_005.wav",
+      "line": "陛下，怕臣脏了您的梦吗？",
+      "duration": 5.82
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_006.wav",
+      "line": "别心疼臣。臣会误会自己还有命可惜。",
+      "duration": 5.18
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_007.wav",
+      "line": "臣进来了。今晚谁也别想越过臣。",
+      "duration": 6.44
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_008.wav",
+      "line": "陛下，这宫里有人嫌您活得太久。",
+      "duration": 5.81
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_009.wav",
+      "line": "查可以。若查到陛下舍不得杀的人，臣替您杀。",
+      "duration": 6.2
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_010.wav",
+      "line": "这支箭若中陛下，臣会很没面子。",
+      "duration": 5.7
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_011.wav",
+      "line": "臣听命。杀手最守约，尤其对陛下。",
+      "duration": 6.26
+    },
+    {
+      "file": "assets/voice/generated/pei/pei_012.wav",
+      "line": "臣的命、刀、夜路，从此都归陛下。",
+      "duration": 6.35
+    }
+  ],
+  "pei_segments_found": 12,
+  "narrator": [
+    {
+      "file": "assets/voice/generated/narrator/narrator_001.wav",
+      "line": "陛下登基第一年。",
+      "duration": 2.43
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_002.wav",
+      "line": "国库空虚。边关不稳。",
+      "duration": 4.84
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_003.wav",
+      "line": "朝中暗流涌动。而后宫，也并不安宁。",
+      "duration": 6.26
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_004.wav",
+      "line": "这一年，所有人都在等陛下做出选择。",
+      "duration": 5.76
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_005.wav",
+      "line": "有人跪在殿前，等一道诏令。",
+      "duration": 5.17
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_006.wav",
+      "line": "有人藏在雨夜，等一次回头。",
+      "duration": 5.09
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_007.wav",
+      "line": "有人把真心，藏进账册。",
+      "duration": 4.44
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_008.wav",
+      "line": "有人把刀锋，交到陛下手里。",
+      "duration": 3.95
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_009.wav",
+      "line": "财富不是终点。只是打开命运的钥匙。",
+      "duration": 5.33
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_010.wav",
+      "line": "朝局每月更替。风闻暗藏机会。",
+      "duration": 5.33
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_011.wav",
+      "line": "市场涨跌无常。胆识决定国库厚薄。",
+      "duration": 5.52
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_012.wav",
+      "line": "一道诏令，可以安民，也可以树敌。",
+      "duration": 6.42
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_013.wav",
+      "line": "一场交易，可以暴富，也可能误判。",
+      "duration": 6.22
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_014.wav",
+      "line": "当财富，权势，魅力与威望，累积到极致。",
+      "duration": 7.39
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_015.wav",
+      "line": "新的命运，便会出现。",
+      "duration": 4.26
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_016.wav",
+      "line": "请陛下入局。",
+      "duration": 3.09
+    },
+    {
+      "file": "assets/voice/generated/narrator/narrator_017.wav",
+      "line": "这一局，天下与真心，都在等您亲手赢下。",
+      "duration": 6.96
+    }
+  ],
+  "narrator_segments_found": 17
 }
