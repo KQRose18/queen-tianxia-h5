@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>女王天下 MVP</title>
+    <link rel="stylesheet" href="style.css?v=20260623-result-layer-1" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="introScreen" class="intro-screen">
+        <div id="introImage" class="intro-image"></div>
+        <div class="intro-shade"></div>
+        <div id="introText" class="intro-text"></div>
+        <button id="introNext" class="tap-button" type="button">凤驾入宫</button>
+      </section>
+
+      <section id="gameScreen" class="game-screen hidden">
+        <header class="status-bar">
+          <div class="queen-mark">
+            <div class="queen-avatar"></div>
+            <div>
+              <strong>Lv8 女王</strong>
+              <span id="monthLabel">登基第一年 · 正月</span>
+            </div>
+          </div>
+          <div class="status-actions">
+            <button id="audioToggleBtn" class="small-button" type="button">音乐开</button>
+            <button id="ttsToggleBtn" class="small-button" type="button">语音开</button>
+            <button id="restartBtn" class="small-button" type="button">重开</button>
+          </div>
+        </header>
+
+        <button id="storyUnlockBar" class="story-unlock-bar hidden" type="button" data-story-guide="">
+          <span id="storyUnlockText">已解锁沈砚的新剧情</span>
+          <strong>去看看</strong>
+        </button>
+
+        <section class="stats-grid" aria-label="女王属性">
+          <article><span>财富</span><strong id="wealthStat">0</strong></article>
+          <article><span>权势</span><strong id="powerStat">0</strong></article>
+          <article><span>魅力</span><strong id="charmStat">0</strong></article>
+          <article><span>威望</span><strong id="prestigeStat">0</strong></article>
+        </section>
+
+        <section id="homePanel" class="home-panel panel-view">
+          <div class="home-visual"></div>
+          <div class="home-copy">
+            <p id="currentChapter" class="eyebrow">沈砚 01 初遇</p>
+            <h1>臣等了您很久。</h1>
+            <p id="homeLine">国库只剩五万两，边关不稳，朝中暗流涌动。沈砚在御书房里等你批下第一道命令。</p>
+            <div class="home-actions">
+              <button id="continueStoryBtn" class="primary-button" type="button">继续短剧</button>
+              <button id="goDateBtn" class="ghost-button" type="button">去见他</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="courtPanel" class="content-panel panel-view hidden">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">女王诏令</p>
+              <h2>每月只能选一道</h2>
+            </div>
+            <span id="edictStatus" class="tag">未批</span>
+          </div>
+          <div id="edictList" class="card-list"></div>
+        </section>
+
+        <section id="marketPanel" class="content-panel panel-view hidden">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">今日风闻</p>
+              <h2>钱是剧情门票</h2>
+            </div>
+            <span id="cashLabel" class="tag">国库 0</span>
+          </div>
+          <div id="rumorList" class="rumor-grid"></div>
+          <div id="assetList" class="card-list"></div>
+        </section>
+
+        <section id="haremPanel" class="content-panel panel-view hidden">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">后宫名册</p>
+              <h2>解锁、约会、推进剧情</h2>
+            </div>
+            <span id="haremCount" class="tag">1/5</span>
+          </div>
+          <div id="consortList" class="consort-grid"></div>
+        </section>
+
+        <section id="storyPanel" class="content-panel panel-view hidden">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">剧情树</p>
+              <h2>每个男宠十段主线</h2>
+            </div>
+            <span id="ticketLabel" class="tag">剧情券 1</span>
+          </div>
+          <div id="storyList" class="card-list"></div>
+        </section>
+
+        <section id="rankPanel" class="content-panel panel-view hidden">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">万国榜</p>
+              <h2>排行解锁高级剧情</h2>
+            </div>
+            <span id="rankLabel" class="tag">第 8</span>
+          </div>
+          <div id="taskList" class="task-row"></div>
+          <div id="rankList" class="card-list"></div>
+        </section>
+
+        <nav class="bottom-nav" aria-label="主导航">
+          <button class="nav-button is-active" type="button" data-tab="home"><span>王座</span></button>
+          <button class="nav-button" type="button" data-tab="court"><span>朝局</span></button>
+          <button class="nav-button" type="button" data-tab="market"><span>市场</span></button>
+          <button class="nav-button" type="button" data-tab="harem"><span>后宫</span></button>
+          <button class="nav-button" type="button" data-tab="story"><span>剧情</span></button>
+          <button class="nav-button" type="button" data-tab="rank"><span>排行</span></button>
+        </nav>
+
+        <div id="guideArrow" class="guide-arrow hidden">市场</div>
+      </section>
+
+      <section id="storyPlayer" class="story-player hidden">
+        <div id="playerImage" class="player-image">
+          <img id="playerImg" alt="剧情 CG" />
+        </div>
+        <div class="player-shade"></div>
+        <div class="player-dialog">
+          <strong id="playerName">沈砚</strong>
+          <p id="playerLine">陛下。</p>
+          <div id="playerChoices" class="choice-list"></div>
+        </div>
+      </section>
+
+      <section id="unlockOverlay" class="unlock-overlay hidden">
+        <div class="unlock-content">
+          <p class="eyebrow">新男宠加入后宫</p>
+          <h2 id="unlockName">裴无咎</h2>
+          <p id="unlockText">听说陛下很有钱。</p>
+          <button id="unlockClose" class="primary-button" type="button">收入后宫</button>
+        </div>
+      </section>
+
+      <section id="resultOverlay" class="result-overlay hidden">
+        <div id="resultImage" class="result-image"></div>
+        <div class="result-shade"></div>
+        <div class="result-content">
+          <p class="eyebrow">剧情结算</p>
+          <h2 id="resultTitle">情意渐深</h2>
+          <p id="resultText">他的目光在灯影里停留得更久。</p>
+          <button id="resultClose" class="primary-button" type="button">继续朝局</button>
+        </div>
+      </section>
+
+      <div id="toastLayer" class="toast-layer"></div>
+    </main>
+
+    <script src="app.js?v=20260623-result-layer-1"></script>
+  </body>
+</html>
