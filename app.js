@@ -57,10 +57,10 @@ const assetAffinity = {
 
 const storyFavorThresholds = {
   shen: [0, 8, 18, 32, 50, 70],
-  pei: [0, 8, 20],
-  xie: [0, 8, 20, 32],
-  xiao: [0, 8, 20, 32],
-  rong: [0, 8, 20, 32]
+  pei: [0, 8, 20, 32, 50, 70],
+  xie: [0, 8, 20, 32, 50, 70],
+  xiao: [0, 8, 20, 32, 50, 70],
+  rong: [0, 8, 20, 32, 50, 70]
 };
 
 const consorts = [
@@ -149,12 +149,12 @@ const storyChapters = {
       ]
     },
     {
-      name: "暧昧",
+      name: "失礼",
       cg: { image: "assets/story/strips/shen_story_03_strip.webp", position: "center center", size: "auto 100%" },
-      line: "奏折重要。还是臣重要？",
+      line: "烛火忽然灭了一半。沈砚扶住你按在奏折上的手，声音仍稳：奏折重要，可臣现在更想犯一次失礼。",
       choices: [
-        { text: "你", favor: 14, reply: "沈砚靠近半寸：陛下若反悔，臣会当真。" },
-        { text: "都重要", favor: 8, reply: "他轻声笑了：贪心也好，臣最擅长替陛下兜底。" }
+        { text: "不许退", favor: 18, reply: "他指尖一紧，低声道：陛下再这样命令，臣真的会忘了君臣。" },
+        { text: "松手", favor: 10, reply: "沈砚立刻退开，却把外袍披到你肩上：臣松手，但心还跪在这里。" }
       ]
     },
     {
@@ -167,21 +167,21 @@ const storyChapters = {
       ]
     },
     {
-      name: "独处",
-      cg: { image: "assets/story/date-shen.webp", position: "center 76%" },
-      line: "夜深了。臣替陛下卸冠，可好？",
+      name: "污名",
+      cg: { image: "assets/story/strips/shen_story_05_strip.webp", fallback: "assets/story/strips/shen_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "百官跪在殿前逼你交出账册，沈砚却先一步认下所有罪名。夜里他回到御书房，外袍半湿，衣领被雨扯开一线，仍隔着案几问你：陛下，要臣替您脏到哪一步？",
       choices: [
-        { text: "准", favor: 18, reply: "金冠落下时，他的手指擦过你耳侧，克制得近乎危险。" },
-        { text: "你胆子大了", favor: 10, reply: "沈砚低声回：臣的胆子，只在陛下面前大。" }
+        { text: "不许他认罪", favor: 18, reply: "沈砚轻轻摇头，握住你按在账册上的手背：陛下干净，臣才有资格站在您身边。骂名这种东西，臣来背。" },
+        { text: "把账册交给他", favor: 14, reply: "他指腹擦过账册边缘，低声道：臣接了。往后朝堂骂臣，陛下只管赢。" }
       ]
     },
     {
-      name: "吃醋",
-      cg: { image: "assets/consorts/shen-yan.webp", position: "center 12%" },
-      line: "听说陛下今日见了谢长离。臣只是来送账册，并非吃味。",
+      name: "不让",
+      cg: { image: "assets/story/strips/shen_story_06_strip.webp", fallback: "assets/story/strips/shen_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "夜半御书房只剩一盏灯。沈砚跪在你案前，终于失了从容：我愿替陛下背万世骂名，但陛下不能把我也推给天下。",
       choices: [
-        { text: "那你为何不看朕", favor: 18, reply: "他终于抬眼：因为臣怕眼神太重，惊扰陛下。" },
-        { text: "账册留下，人也留下", favor: 15, reply: "沈砚合上门：臣遵旨。" }
+        { text: "抬起他的下巴", favor: 20, reply: "他眼尾微红，却顺着你的指尖抬头：臣可以做陛下最干净的刀，也可以做最脏的影子。唯独不能做旁人。" },
+        { text: "问他想要什么", favor: 18, reply: "沈砚低声笑了一下：臣想要陛下每一次回头，都先看见臣。" }
       ]
     }
   ],
@@ -205,15 +205,41 @@ const storyChapters = {
       ]
     },
     {
-      name: "守夜",
+      name: "血雨",
       cg: { image: "assets/story/strips/pei_story_03_strip.webp", position: "center center", size: "auto 100%" },
-      line: "今晚宫墙上风大。臣守着，陛下睡。",
+      line: "雨水顺着裴无咎的刀尖落下。他挡在你窗前，肩上新伤裂开，却笑着问：陛下，怕臣脏了您的梦吗？",
       choices: [
-        { text: "你也进来", favor: 18, reply: "他翻窗落地，低声道：陛下，这可是您亲口准的。" },
-        { text: "不许受伤", favor: 12, reply: "裴无咎偏头笑：女王的命令，臣听。" }
+        { text: "替他按住伤口", favor: 20, reply: "他呼吸乱了一瞬，握刀的手却更稳：别心疼臣。臣会误会自己还有命可惜。" },
+        { text: "命他进殿", favor: 16, reply: "裴无咎翻窗跪下，雨水滴在地上：臣进来了。今晚谁也别想越过臣。" }
       ]
-    }
-  ],
+    },
+    {
+      name: "暗箭",
+      cg: { image: "assets/story/strips/pei_story_04_strip.webp", fallback: "assets/story/strips/pei_story_03_strip.webp", position: "center center", size: "auto 100%" },
+      line: "宫墙雨夜，第三支暗箭擦着你的凤辇飞过。裴无咎从黑暗里落下，黑衣被雨贴在肩背，刀尖滴水，声音比雨还冷：陛下，这宫里有人嫌您活得太久。",
+      choices: [
+        { text: "让他查", favor: 18, reply: "裴无咎低笑：查可以。若查到陛下舍不得杀的人，臣替您杀。" },
+        { text: "让他先包扎", favor: 20, reply: "他看了一眼臂上的伤，像才想起来会疼，任你扯开湿透的袖口：陛下要臣活着查，臣就活着。" }
+      ]
+    },
+    {
+      name: "替箭",
+      cg: { image: "assets/story/strips/pei_story_05_strip.webp", fallback: "assets/story/strips/pei_story_03_strip.webp", position: "center center", size: "auto 100%" },
+      line: "你刚伸手掀帘，裴无咎忽然扑过来把你护回凤辇，近得能听见他压乱的呼吸。暗箭穿过他肩骨，他却笑：这支箭若中陛下，臣会很没面子。",
+      choices: [
+        { text: "按住他的伤口", favor: 20, reply: "裴无咎呼吸乱了一瞬，肩背绷紧，仍盯着你笑：陛下手别抖。臣还没替您杀完人。" },
+        { text: "命他不许死", favor: 18, reply: "他伏在你袖边，声音发哑：臣听命。杀手最守约，尤其对陛下。" }
+      ]
+    },
+    {
+      name: "献刀",
+      cg: { image: "assets/story/strips/pei_story_06_strip.webp", fallback: "assets/story/strips/pei_story_03_strip.webp", position: "center center", size: "auto 100%" },
+      line: "雨下到天明，裴无咎跪在宫门前，把自己的刀横放到你脚边：若有一日臣背叛陛下，请陛下亲手杀我。别交给旁人，臣会嫉妒。",
+      choices: [
+        { text: "接过他的刀", favor: 20, reply: "裴无咎低下头，额头几乎碰到你的裙摆，像终于被驯服：臣的命、刀、夜路，从此都归陛下。" },
+        { text: "问他查到了谁", favor: 18, reply: "他抬眼，笑意彻底冷下来：买凶的人不在宫外。陛下，您的龙椅旁边，有一只手伸得太近。" }
+      ]
+    }],
   xie: [
     {
       name: "账房",
@@ -234,12 +260,12 @@ const storyChapters = {
       ]
     },
     {
-      name: "分红",
+      name: "密信",
       cg: { image: "assets/story/strips/xie_story_03_strip.webp", position: "center center", size: "auto 100%" },
-      line: "这是一夜赚来的银票。陛下要账，还是要臣？",
+      line: "账册暗格里滑出一封密信。谢长离第一次没有笑，算盘珠停在半空：陛下，这一笔若查下去，臣可能赔上命。",
       choices: [
-        { text: "账和人都要", favor: 20, reply: "谢长离低笑：陛下果然是天下最狠的买家。" },
-        { text: "先把账放下", favor: 13, reply: "他把银票推远：那臣今晚，只谈风月。" }
+        { text: "压住密信", favor: 20, reply: "他看着你的手，声音低了下去：陛下压的是信，还是臣的命门？" },
+        { text: "让他自己交代", favor: 15, reply: "谢长离把暗格全推开：臣黑心，但不蠢。该赔给陛下的，一文都不会少。" }
       ]
     },
     {
@@ -249,6 +275,24 @@ const storyChapters = {
       choices: [
         { text: "喂他喝药", favor: 20, reply: "谢长离低头就着你的手喝下去：亏是亏了，可臣愿意续约。" },
         { text: "只收账不收人", favor: 13, reply: "他咳着笑：陛下真狠。那臣再赚一座金山，换您改口。" }
+      ]
+    },
+    {
+      name: "病账",
+      cg: { image: "assets/story/strips/xie_story_05_strip.webp", fallback: "assets/story/strips/xie_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "国库账房灯亮了一整夜。谢长离烧得指尖发冷，衣领松散，仍把最后一本假账压在身下，笑着问你：陛下，是先查账，还是先查臣的命？",
+      choices: [
+        { text: "先喂他喝药", favor: 20, reply: "他低头就着你的手喝下去，唇几乎碰到你指节，声音轻得不像他：陛下这样，臣会以为自己比钱值钱。" },
+        { text: "先翻账册", favor: 16, reply: "谢长离闭了闭眼，仍笑：果然是臣看上的买家，心狠，眼准，还要命。" }
+      ]
+    },
+    {
+      name: "赔尽",
+      cg: { image: "assets/story/strips/xie_story_06_strip.webp", fallback: "assets/story/strips/xie_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "城门将闭，谢长离用半座长安的银路买你一条生路。他第一次没有笑，只把契书和自己的私印一并推到你面前：钱赔给陛下，人也赔给陛下。臣怕的不是亏，是陛下不要臣。",
+      choices: [
+        { text: "收下契书", favor: 20, reply: "他眼底终于松动：成交。往后臣赚的每一文，都是陛下的退路。" },
+        { text: "只收人，不收钱", favor: 18, reply: "谢长离怔住，喉结滚了一下，慢慢把额头抵到你掌心：陛下这笔买卖，臣赔得心甘情愿。" }
       ]
     }
   ],
@@ -272,12 +316,12 @@ const storyChapters = {
       ]
     },
     {
-      name: "请命",
+      name: "活命",
       cg: { image: "assets/story/strips/xiao_story_03_strip.webp", position: "center center", size: "auto 100%" },
-      line: "边关若乱，臣请为陛下先死。",
+      line: "萧照跪在雪里请命，血从甲缝渗出来：臣可以替陛下死。但若陛下要臣活着回来，臣也领命。",
       choices: [
-        { text: "朕不准", favor: 19, reply: "萧照喉结滚动：那臣就为陛下活着回来。" },
-        { text: "带胜仗回来", favor: 12, reply: "他握拳叩地：臣领命。" }
+        { text: "按住他的伤口", favor: 20, reply: "萧照呼吸一滞，眼尾发红：臣不敢死了。陛下的手还在这里。" },
+        { text: "命他活着回来", favor: 16, reply: "他单膝跪得更低：臣领命。刀会赢，人也会回来。" }
       ]
     },
     {
@@ -287,6 +331,24 @@ const storyChapters = {
       choices: [
         { text: "准他抱一瞬", favor: 20, reply: "萧照只抱了一瞬，低声道：臣记住了。下次不靠战功，也要活着见陛下。" },
         { text: "让他松手", favor: 14, reply: "他立刻退开，却仍盯着你：臣听命。只是心跳，暂时收不回去。" }
+      ]
+    },
+    {
+      name: "死讯",
+      cg: { image: "assets/story/strips/xiao_story_05_strip.webp", fallback: "assets/story/strips/xiao_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "边关急报送到御前，只剩一面染血断旗和半片黑甲。所有人都说萧照战死，只有旗角压着一行血字：臣若回不来，陛下别看别人。",
+      choices: [
+        { text: "不信他死", favor: 18, reply: "风把断旗吹到你掌心，血字未干，像他还在咬牙撑着等你下一道命令。" },
+        { text: "命人开城搜救", favor: 20, reply: "禁军领命退下，殿外雷声滚过，仿佛有马蹄声从很远的雪里追来。" }
+      ]
+    },
+    {
+      name: "活着",
+      cg: { image: "assets/story/strips/xiao_story_06_strip.webp", fallback: "assets/story/strips/xiao_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "天亮时，萧照拖着断旗和胜报回到宫门，黑甲裂开，伤口还在渗血。他跪地请罪：臣赢了，但差点没能活着见陛下。请陛下命令臣，往后不许只会为您死。",
+      choices: [
+        { text: "按住他的伤口", favor: 20, reply: "萧照疼得发颤，却握住你按在伤口上的手：臣记住了。陛下按着的地方，往后不准死。" },
+        { text: "准他抱一下", favor: 18, reply: "他只抱了一瞬就松开，盔甲冰冷，呼吸滚烫：臣不敢久抱。怕一松手，又想替陛下去死。" }
       ]
     }
   ],
@@ -310,12 +372,12 @@ const storyChapters = {
       ]
     },
     {
-      name: "旧国",
+      name: "杯沿",
       cg: { image: "assets/story/strips/rong_story_03_strip.webp", position: "center center", size: "auto 100%" },
-      line: "若有一天，臣的旧国与陛下为敌呢？",
+      line: "酒盏递来时，容与指尖故意擦过你。笑意还未落，旧国信物忽然出现在宴灯下，他的眼神冷了半分。",
       choices: [
-        { text: "你站朕身边", favor: 18, reply: "容与收起笑：只要陛下回头，臣就在。" },
-        { text: "朕会赢", favor: 14, reply: "他轻叹：真不巧，臣最爱赢家。" }
+        { text: "不松开酒盏", favor: 20, reply: "容与垂眼看着相触的指尖：陛下这样留人，臣很难不误会。" },
+        { text: "问他站哪边", favor: 15, reply: "他收起笑：旧国给臣姓名，陛下给臣退路。臣还在选。" }
       ]
     },
     {
@@ -325,6 +387,24 @@ const storyChapters = {
       choices: [
         { text: "收下信物", favor: 20, reply: "容与把玉坠放进你掌心：从今夜起，臣的退路在陛下这里。" },
         { text: "让他清醒再说", favor: 15, reply: "他笑着俯近，又停在礼数之外：臣清醒得很，只是终于敢输。" }
+      ]
+    },
+    {
+      name: "回头",
+      cg: { image: "assets/story/strips/rong_story_05_strip.webp", fallback: "assets/story/strips/rong_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "旧国使者跪在殿下，奉上王印，要容与随他们回去。容与笑着看你，杯中酒却一滴没喝：陛下猜，臣会不会回头？",
+      choices: [
+        { text: "不许他走", favor: 20, reply: "容与眼底笑意一顿，慢慢走到高台下仰头看你：陛下这句话，比旧国王印更像枷锁。" },
+        { text: "让他自己选", favor: 18, reply: "他轻轻晃杯：陛下最残忍。您给臣自由，臣反而舍不得走。" }
+      ]
+    },
+    {
+      name: "献国",
+      cg: { image: "assets/story/strips/rong_story_06_strip.webp", fallback: "assets/story/strips/rong_story_04_strip.webp", position: "center center", size: "auto 100%" },
+      line: "月色下，容与把旧国信物放进你掌心，指尖在你掌纹上停得太久。他笑得像输得很漂亮：旧国给臣王冠，陛下给臣心跳。臣选陛下，但这份献礼，恐怕有人动了手脚。",
+      choices: [
+        { text: "收下他的信物", favor: 20, reply: "容与垂眸，唇停在你指尖前一寸，礼数停得刚好：从今夜起，臣没有旧国，只有陛下。" },
+        { text: "问他怕不怕后悔", favor: 18, reply: "他笑意微哑：后悔也晚了。臣这颗心，已经在陛下掌心里跳过一次。" }
       ]
     }
   ]
@@ -426,6 +506,9 @@ let activeBgm = null;
 let audioUnlocked = false;
 let pendingBgmKey = null;
 let storyUnlockTimer = null;
+let preferredTtsVoice = null;
+let ttsAudioManifest = {};
+let activeVoiceAudio = null;
 const sfxPool = {};
 
 const $ = (selector) => document.querySelector(selector);
@@ -444,6 +527,7 @@ function createState() {
     tickets: 1,
     activeConsort: "shen",
     bgmMuted: false,
+    ttsEnabled: true,
     guided: false,
     edictDone: false,
     tutorialDone: false,
@@ -452,6 +536,13 @@ function createState() {
     unlocked: {},
     favor: {},
     story: {},
+    resultSeen: {
+      storyFirst: {},
+      storyKey: {},
+      money: false,
+      edict: false,
+      rank: false
+    },
     daily: { trade: false, date: false, edict: false }
   };
 
@@ -480,6 +571,12 @@ function loadState() {
       unlocked: { ...base.unlocked, ...saved.unlocked },
       favor: { ...base.favor, ...saved.favor },
       story: { ...base.story, ...saved.story },
+      resultSeen: {
+        ...base.resultSeen,
+        ...saved.resultSeen,
+        storyFirst: { ...base.resultSeen.storyFirst, ...saved.resultSeen?.storyFirst },
+        storyKey: { ...base.resultSeen.storyKey, ...saved.resultSeen?.storyKey }
+      },
       daily: { ...base.daily, ...saved.daily }
     };
   } catch {
@@ -489,6 +586,26 @@ function loadState() {
 
 function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function voiceKey(name, line) {
+  const input = `${name}|${line}`.replace(/\s+/g, " ").trim();
+  let hash = 2166136261;
+  for (let i = 0; i < input.length; i += 1) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return `v_${(hash >>> 0).toString(36)}`;
+}
+
+async function loadTtsAudioManifest() {
+  try {
+    const response = await fetch(`assets/voice/manifest.json?v=${ASSET_VERSION}`);
+    if (!response.ok) return;
+    ttsAudioManifest = await response.json();
+  } catch {
+    ttsAudioManifest = {};
+  }
 }
 
 function unlockAudio() {
@@ -562,6 +679,75 @@ function setBgmMuted(muted) {
   saveState();
 }
 
+function setTtsEnabled(enabled) {
+  state.ttsEnabled = enabled;
+  $("#ttsToggleBtn").textContent = enabled ? "语音开" : "语音关";
+  if (!enabled) stopTts();
+  saveState();
+}
+
+function initTtsVoice() {
+  if (!("speechSynthesis" in window)) return;
+  const voices = window.speechSynthesis.getVoices();
+  preferredTtsVoice =
+    voices.find((voice) => /zh|cmn|Chinese|Mandarin/i.test(`${voice.lang} ${voice.name}`)) ||
+    voices.find((voice) => /^zh/i.test(voice.lang)) ||
+    null;
+}
+
+function ttsProfile(name) {
+  return {
+    "沈砚": { rate: 0.82, pitch: 0.78 },
+    "萧照": { rate: 0.78, pitch: 0.62 },
+    "容与": { rate: 0.88, pitch: 0.9 },
+    "谢长离": { rate: 0.9, pitch: 0.82 },
+    "裴无咎": { rate: 0.74, pitch: 0.58 },
+    "朝局": { rate: 0.88, pitch: 0.76 }
+  }[name] || { rate: 0.86, pitch: 0.76 };
+}
+
+function stopTts() {
+  if (activeVoiceAudio) {
+    activeVoiceAudio.pause();
+    activeVoiceAudio.currentTime = 0;
+    activeVoiceAudio = null;
+  }
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+}
+
+function playTtsAudioFile(name, line) {
+  const src = ttsAudioManifest[voiceKey(name, line)];
+  if (!src) return false;
+  stopTts();
+  activeVoiceAudio = new Audio(src);
+  activeVoiceAudio.volume = 0.96;
+  activeVoiceAudio.play().catch(() => speakBrowserTts(name, line));
+  return true;
+}
+
+function speakLine(name, line) {
+  if (!state.ttsEnabled) return;
+  if (playTtsAudioFile(name, line)) return;
+  speakBrowserTts(name, line);
+}
+
+function speakBrowserTts(name, line) {
+  if (!("speechSynthesis" in window)) return;
+  const cleanLine = line.replace(/[“”"「」]/g, "").replace(/\s+/g, " ").trim();
+  if (!cleanLine) return;
+  stopTts();
+  initTtsVoice();
+  const utterance = new SpeechSynthesisUtterance(cleanLine);
+  utterance.lang = preferredTtsVoice?.lang || "zh-CN";
+  utterance.voice = preferredTtsVoice;
+  const profile = ttsProfile(name);
+  utterance.rate = profile.rate;
+  utterance.pitch = profile.pitch;
+  utterance.volume = 0.92;
+  window.speechSynthesis.speak(utterance);
+}
+
 function ok(text) {
   return { ok: true, text };
 }
@@ -607,7 +793,7 @@ function grantAffinity(affinity, multiplier = 1) {
     gains.push(`${consort.name}好感 +${amount}`);
     if (afterChapter > beforeChapter) {
       const chapter = getChapter(id, afterChapter);
-      unlocks.push({ id, name: consort.name, chapter: chapter.name });
+      unlocks.push({ id, name: consort.name, chapter: chapter.name, chapterIndex: afterChapter });
     }
   });
   if (gains.length) playSfx("affection");
@@ -667,6 +853,7 @@ function chapterCg(id, index) {
   const chapter = getChapter(id, index);
   return {
     image: chapter.cg?.image || consort.img,
+    fallback: chapter.cg?.fallback || consort.img,
     position: chapter.cg?.position || "center 26%",
     size: chapter.cg?.size || "contain",
     strip: chapter.cg?.image?.includes("/strips/") || false,
@@ -744,6 +931,7 @@ function showTab(tab) {
 
 function renderAll() {
   $("#audioToggleBtn").textContent = state.bgmMuted ? "音乐关" : "音乐开";
+  $("#ttsToggleBtn").textContent = state.ttsEnabled ? "语音开" : "语音关";
   renderStatus();
   renderMarket();
   renderEdicts();
@@ -767,6 +955,7 @@ function renderStatus() {
   const activeConsort = consorts.find((item) => item.id === activeId);
   const activeChapter = getChapter(activeId);
   $("#currentChapter").textContent = `${activeConsort.name} ${String(getChapterIndex(activeId) + 1).padStart(2, "0")} ${activeChapter.name}`;
+  $("#homeTitle").textContent = `${activeConsort.name} · ${activeChapter.name}`;
   $("#homeLine").textContent = activeChapter.line;
   $(".home-visual").style.backgroundImage = `linear-gradient(180deg, rgba(16, 9, 8, 0.05), rgba(16, 9, 8, 0.52) 56%, #100908 90%), url("${activeConsort.img}?v=${ASSET_VERSION}")`;
   $(".home-visual").style.backgroundPosition = "center 18%";
@@ -841,18 +1030,22 @@ function renderStories() {
     const unlockedChapter = getUnlockedChapterIndex(consort.id);
     const nextUnwatched = getNextUnwatchedIndex(consort.id);
     const complete = isStoryComplete(consort.id);
+    const totalChapters = storyChapters[consort.id].length;
+    const watchedCount = complete ? totalChapters : Math.min(nextUnwatched, totalChapters);
+    const unlockedCount = Math.max(watchedCount, Math.min(unlockedChapter + 1, totalChapters));
     const canContinue = !complete && nextUnwatched <= unlockedChapter;
     const cards = storyChapters[consort.id].map((chapter, index) => {
-      const unlocked = index <= unlockedChapter;
       const replay = complete || index < nextUnwatched;
+      const unlocked = index <= unlockedChapter || replay;
       const current = canContinue && index === nextUnwatched;
       const playable = unlocked && (replay || current);
+      const stateLabel = !unlocked ? "未解锁" : replay ? "已观看" : "未观看";
       const lockedText = index > unlockedChapter
         ? `好感达到 ${nextChapterNeed(consort.id, index)} 解锁。`
         : "先完成上一段剧情。";
       return `
-        <button class="story-card ${current ? "is-current" : ""}" type="button" data-story="${consort.id}" data-chapter="${index}" ${playable ? "" : "disabled"}>
-          <strong>${String(index + 1).padStart(2, "0")} ${chapter.name}${replay ? " · 回放" : current ? " · 当前" : ""}</strong>
+        <button class="story-card ${current ? "is-current" : ""} ${replay ? "is-watched" : ""} ${unlocked && !replay ? "is-unwatched" : ""}" type="button" data-story="${consort.id}" data-chapter="${index}" id="story-${consort.id}-${index}" ${playable ? "" : "disabled"}>
+          <strong>${String(index + 1).padStart(2, "0")} ${chapter.name}<i class="story-state">${stateLabel}</i></strong>
           <span>${playable ? chapter.line : lockedText}</span>
         </button>
       `;
@@ -861,7 +1054,7 @@ function renderStories() {
       <article class="story-group">
         <div class="story-group-head">
           <strong>${consort.name}</strong>
-          <span>进度 ${complete ? storyChapters[consort.id].length : nextUnwatched + 1}/${storyChapters[consort.id].length} · 已解锁 ${unlockedChapter + 1} · 好感 ${state.favor[consort.id]}</span>
+          <span>已看 ${watchedCount}/${totalChapters} · 可看 ${unlockedCount}/${totalChapters} · 好感 ${state.favor[consort.id]}</span>
         </div>
         ${cards}
       </article>
@@ -912,7 +1105,7 @@ function buyAsset(assetId) {
     state.favor.shen += 3;
     const afterChapter = getUnlockedChapterIndex("shen");
     if (afterChapter > beforeChapter) {
-      showStoryUnlockBar({ id: "shen", name: "沈砚", chapter: getChapter("shen", afterChapter).name });
+      showStoryUnlockBar({ id: "shen", name: "沈砚", chapter: getChapter("shen", afterChapter).name, chapterIndex: afterChapter });
     }
     playSfx("affection");
     playSfx("coinSmall");
@@ -939,6 +1132,7 @@ function sellAsset(assetId) {
     toast("尚未持有");
     return;
   }
+  const beforeRank = rankPosition();
   const multiplier = 1.12 + Math.random() * 0.68;
   let gain = Math.round(state.prices[assetId] * multiplier);
   if (state.unlocked.xie && ["silk", "glass"].includes(assetId)) gain = Math.round(gain * 1.12);
@@ -953,6 +1147,11 @@ function sellAsset(assetId) {
   nextMarketMonth();
   checkUnlocks();
   renderAll();
+  if (rankPosition() < beforeRank && shouldShowGenericResult("rank")) {
+    showGenericResult("rank", "万国榜上升", "金榜重排，女王之名又向前一步。");
+  } else if (shouldShowGenericResult("money")) {
+    showGenericResult("money", "国库暴涨", `卖出${asset.name}，入账 ${fmt(gain)} 两。`);
+  }
 }
 
 function nextMarketMonth() {
@@ -974,6 +1173,7 @@ function applyEdict(id) {
     toast("本月诏令已批");
     return;
   }
+  const beforeRank = rankPosition();
   const edict = edicts.find((item) => item.id === id);
   const result = edict.apply(state);
   playSfx(result.ok ? "edict" : "error");
@@ -987,6 +1187,13 @@ function applyEdict(id) {
     toast(result.text);
   }
   renderAll();
+  if (result.ok) {
+    if (rankPosition() < beforeRank && shouldShowGenericResult("rank")) {
+      showGenericResult("rank", "万国榜上升", "这一道诏令之后，天下终于开始重新看见你。");
+    } else if (shouldShowGenericResult("edict")) {
+      showGenericResult("edict", "诏令已定", "玉玺落下，朝局因此改写。");
+    }
+  }
 }
 
 function startDate(id, spendResource = true, requestedChapter = getChapterIndex(id)) {
@@ -1045,9 +1252,15 @@ function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id)) {
     {
       text: "收下这段回忆",
       action: () => {
-        toast("剧情已推进");
         playSfx("story");
-        showStoryResult(id);
+        closePlayer();
+        if (shouldShowStoryResult(id, chapterIndex)) {
+          showStoryResult(id);
+        } else {
+          toast("剧情已推进");
+          checkUnlocks();
+          renderAll();
+        }
       }
     },
     ...(hasNext ? [{
@@ -1060,6 +1273,46 @@ function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id)) {
   advanceStoryView(() => {
     updatePlayerDialog(consort.name, reply, followUpChoices);
   });
+}
+
+function shouldShowStoryResult(id, chapterIndex) {
+  const firstSeen = state.resultSeen.storyFirst[id];
+  if (!firstSeen) {
+    state.resultSeen.storyFirst[id] = true;
+    saveState();
+    return true;
+  }
+  const chapterNo = chapterIndex + 1;
+  const isKeyNode = chapterNo === 3 || chapterNo === 6 || chapterNo === 10;
+  const key = `${id}-${chapterNo}`;
+  if (isKeyNode && !state.resultSeen.storyKey[key]) {
+    state.resultSeen.storyKey[key] = true;
+    saveState();
+    return true;
+  }
+  return false;
+}
+
+function shouldShowGenericResult(type) {
+  if (type === "rank") {
+    if (state.resultSeen.rank) return false;
+    state.resultSeen.rank = true;
+    saveState();
+    return true;
+  }
+  if (type === "money") {
+    if (state.resultSeen.money) return false;
+    state.resultSeen.money = true;
+    saveState();
+    return true;
+  }
+  if (type === "edict") {
+    if (state.resultSeen.edict) return false;
+    state.resultSeen.edict = true;
+    saveState();
+    return true;
+  }
+  return true;
 }
 
 function playStory(id, requestedChapter) {
@@ -1106,17 +1359,24 @@ function openPlayer(name, line, choices, bg) {
   const cg = typeof bg === "object" ? bg : { image: bg === "opening" ? "assets/story/opening-shen.webp" : "assets/story/date-shen.webp", position: "center 46%" };
   $("#storyPlayer").classList.toggle("strip-mode", Boolean(cg.strip));
   $("#storyPlayer").classList.remove("is-advancing");
+  $("#playerImg").onerror = () => {
+    if (cg.fallback && !$("#playerImg").src.includes(cg.fallback)) {
+      $("#playerImg").src = `${cg.fallback}?v=${ASSET_VERSION}`;
+    }
+  };
   $("#playerImg").src = `${cg.image}?v=${ASSET_VERSION}`;
   $("#playerImg").alt = `${name} 剧情 CG`;
   $("#playerImg").onload = () => scrollStripTo(cg.progress || 0);
   $("#playerChoices").innerHTML = choices.map((choice, index) => `<button type="button" data-choice="${index}">${choice.text}</button>`).join("");
   playerCallback = choices;
   $("#storyPlayer").classList.remove("hidden");
+  speakLine(name, line);
 }
 
 function closePlayer() {
   $("#storyPlayer").classList.add("hidden");
   playerCallback = null;
+  stopTts();
   playBgm("home");
 }
 
@@ -1131,6 +1391,13 @@ function showStoryResult(id) {
   renderAll();
 }
 
+function showGenericResult(type, title, text) {
+  $("#resultImage").style.backgroundImage = `url("${(resultImages[type] || resultImages.affection)}?v=${ASSET_VERSION}")`;
+  $("#resultTitle").textContent = title;
+  $("#resultText").textContent = text;
+  $("#resultOverlay").classList.remove("hidden");
+}
+
 function closeStoryResult() {
   $("#resultOverlay").classList.add("hidden");
   playBgm("home");
@@ -1142,6 +1409,7 @@ function updatePlayerDialog(name, line, choices) {
   $("#playerChoices").innerHTML = choices.map((choice, index) => `<button type="button" data-choice="${index}">${choice.text}</button>`).join("");
   playerCallback = choices;
   $("#storyPlayer").classList.remove("is-advancing");
+  speakLine(name, line);
 }
 
 function lockPlayerChoices() {
@@ -1172,13 +1440,28 @@ function toast(message) {
 
 function showStoryUnlockBar(unlock) {
   const bar = $("#storyUnlockBar");
-  $("#storyUnlockText").textContent = `已解锁${unlock.name}的新剧情：${unlock.chapter}`;
+  $("#storyUnlockText").innerHTML = `<b>${unlock.name} 新剧情已解锁</b><em>《${unlock.chapter}》正在等陛下临幸</em>`;
   bar.dataset.storyGuide = unlock.id;
+  bar.dataset.storyChapter = String(unlock.chapterIndex ?? getUnlockedChapterIndex(unlock.id));
   bar.classList.remove("hidden");
+  toast(`新剧情已解锁：${unlock.name}《${unlock.chapter}》`);
   clearTimeout(storyUnlockTimer);
   storyUnlockTimer = setTimeout(() => {
     bar.classList.add("hidden");
-  }, 5200);
+  }, 18000);
+}
+
+function focusStoryCard(id, chapterIndex) {
+  const panel = $("#storyPanel");
+  const target = document.getElementById(`story-${id}-${chapterIndex}`);
+  if (!panel || !target) return;
+  $$(".story-card.is-guided").forEach((card) => card.classList.remove("is-guided"));
+  target.classList.add("is-guided");
+  panel.scrollTo({
+    top: Math.max(0, target.offsetTop - panel.clientHeight * 0.34),
+    behavior: "smooth"
+  });
+  window.setTimeout(() => target.classList.remove("is-guided"), 3600);
 }
 
 function coinRain() {
@@ -1219,12 +1502,23 @@ function restart() {
 }
 
 function bindEvents() {
+  if ("speechSynthesis" in window) {
+    initTtsVoice();
+    window.speechSynthesis.onvoiceschanged = initTtsVoice;
+  }
   $("#restartBtn").addEventListener("click", restart);
   $("#continueStoryBtn").addEventListener("click", () => startDate(getHomeConsortId()));
   $("#goDateBtn").addEventListener("click", () => showTab("harem"));
   $("#audioToggleBtn").addEventListener("click", () => {
     unlockAudio();
     setBgmMuted(!state.bgmMuted);
+  });
+  $("#ttsToggleBtn").addEventListener("click", () => {
+    unlockAudio();
+    setTtsEnabled(!state.ttsEnabled);
+    if (state.ttsEnabled && !$("#storyPlayer").classList.contains("hidden")) {
+      speakLine($("#playerName").textContent, $("#playerLine").textContent);
+    }
   });
   $("#playerImage").addEventListener("click", scrollStripNext);
   $("#unlockClose").addEventListener("click", () => {
@@ -1247,10 +1541,13 @@ function bindEvents() {
     if (event.target.closest("button")) playSfx("click");
     if (storyGuide) {
       const id = storyGuide.dataset.storyGuide;
+      const chapterIndex = Number(storyGuide.dataset.storyChapter || getUnlockedChapterIndex(id));
       state.activeConsort = id || state.activeConsort;
       storyGuide.classList.add("hidden");
+      if (!$("#storyPlayer").classList.contains("hidden")) closePlayer();
       showTab("story");
       renderAll();
+      window.setTimeout(() => focusStoryCard(id, chapterIndex), 80);
       return;
     }
     if (tab) showTab(tab.dataset.tab);
@@ -1264,4 +1561,5 @@ function bindEvents() {
 }
 
 bindEvents();
+loadTtsAudioManifest();
 startIntro();

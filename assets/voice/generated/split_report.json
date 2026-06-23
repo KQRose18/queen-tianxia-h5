@@ -1,0 +1,128 @@
+{
+  "shen": [
+    {
+      "file": "assets/voice/generated/shen/shen_001.wav",
+      "line": "陛下，臣等了您很久。",
+      "duration": 3.29
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_002.wav",
+      "line": "奏折重要，还是臣重要？",
+      "duration": 5.19
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_003.wav",
+      "line": "臣只是怕看久了，会忘了礼数。",
+      "duration": 4.39
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_004.wav",
+      "line": "国库只剩五万两。再这样下去，臣只能把自己卖了。",
+      "duration": 7.3
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_005.wav",
+      "line": "不错。看来陛下还没昏庸到无药可救。",
+      "duration": 5.21
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_006.wav",
+      "line": "若有一日，臣与天下相悖，陛下选谁？",
+      "duration": 5.58
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_007.wav",
+      "line": "陛下这句话，臣会记一整夜。",
+      "duration": 4.47
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_008.wav",
+      "line": "贪心也好。臣最擅长替陛下兜底。",
+      "duration": 4.76
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_009.wav",
+      "line": "夜深了。臣替陛下卸冠，可好？",
+      "duration": 6.63
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_010.wav",
+      "line": "臣的胆子，只在陛下面前大。",
+      "duration": 3.97
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_011.wav",
+      "line": "听说陛下今日见了谢长离。臣只是来送账册，并非吃味。",
+      "duration": 8.73
+    },
+    {
+      "file": "assets/voice/generated/shen/shen_012.wav",
+      "line": "陛下若反悔，臣会当真。",
+      "duration": 4.38
+    }
+  ],
+  "shen_segments_found": 12,
+  "xiao": [
+    {
+      "file": "assets/voice/generated/xiao/xiao_001.wav",
+      "line": "臣身上都是血，陛下还要靠近？",
+      "duration": 2.45
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_002.wav",
+      "line": "臣的命，早就是陛下的。",
+      "duration": 3.08
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_003.wav",
+      "line": "那臣只咬陛下的敌人。",
+      "duration": 2.18
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_004.wav",
+      "line": "满朝都说臣是疯犬。陛下也怕？",
+      "duration": 2.58
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_005.wav",
+      "line": "陛下若养得起，臣便只听陛下一人。",
+      "duration": 2.31
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_006.wav",
+      "line": "边关若乱，臣请为陛下先死。",
+      "duration": 2.43
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_007.wav",
+      "line": "臣的刀，只认陛下一人。",
+      "duration": 3.11
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_008.wav",
+      "line": "臣不怕死。臣只怕回来时，陛下身边已有别人。",
+      "duration": 2.08
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_009.wav",
+      "line": "若陛下不准臣死，臣就为陛下活着回来。",
+      "duration": 2.67
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_010.wav",
+      "line": "这身血不干净。可臣的心，是干净给陛下看的。",
+      "duration": 2.69
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_011.wav",
+      "line": "他们说臣疯。可臣只是在陛下面前，不想装得像个人。",
+      "duration": 2.38
+    },
+    {
+      "file": "assets/voice/generated/xiao/xiao_012.wav",
+      "line": "陛下下令吧。臣愿替您踏平所有不臣之人。",
+      "duration": 3.13
+    }
+  ],
+  "xiao_segments_found": 26
+}
