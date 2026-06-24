@@ -1,5 +1,5 @@
 const STORAGE_KEY = "queen-tianxia-shortdrama-mvp-v3";
-const ASSET_VERSION = "20260623-184814";
+const ASSET_VERSION = "20260624-111500";
 
 const audioManifest = {
   bgm: {
@@ -538,6 +538,9 @@ let ttsAudioManifest = {};
 let activeVoiceAudio = null;
 let narrationToken = 0;
 const sfxPool = {};
+const bgmStartOffsets = {
+  pei: 4.6
+};
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
@@ -569,7 +572,8 @@ function createState() {
       storyKey: {},
       money: false,
       edict: false,
-      rank: false
+      rank: false,
+      earnReward: false
     },
     daily: { trade: false, date: false, edict: false }
   };
@@ -666,7 +670,11 @@ function playBgm(key) {
   }
   const src = audioManifest.bgm[key];
   if (!src) return;
+  const startOffset = bgmStartOffsets[key] || 0;
   if (activeBgm?.dataset.key === key) {
+    if (startOffset && activeBgm.currentTime < startOffset - 0.1) {
+      activeBgm.currentTime = startOffset;
+    }
     activeBgm.play().then(() => {
       pendingBgmKey = null;
     }).catch(() => {
@@ -682,6 +690,7 @@ function playBgm(key) {
   activeBgm.dataset.key = key;
   activeBgm.loop = true;
   activeBgm.volume = key === "intro" ? 0.46 : 0.38;
+  activeBgm.currentTime = startOffset;
   activeBgm.play().then(() => {
     pendingBgmKey = null;
   }).catch(() => {
@@ -959,6 +968,19 @@ function chapterCg(id, index) {
   };
 }
 
+function nightcallCg(id) {
+  const consort = consorts.find((item) => item.id === id);
+  const fallback = getChapter(id, Math.min(4, getUnlockedChapterIndex(id))).cg?.image || consort.img;
+  return {
+    image: `assets/story/nightcalls/${id}_nightcall_01.webp`,
+    fallback,
+    position: "center 38%",
+    size: "contain",
+    strip: false,
+    progress: 0
+  };
+}
+
 function bgmForConsort(id) {
   return audioManifest.bgm[id] ? id : "home";
 }
@@ -1116,6 +1138,10 @@ function renderConsorts() {
         <img src="${consort.img}?v=${ASSET_VERSION}" alt="${consort.name}" />
         <div class="consort-body">
           <h3>${consort.name}</h3>
+          <div class="spend-actions">
+            <button class="spend-button" type="button" data-gift="${consort.id}" ${unlocked ? "" : "disabled"}>赠礼 12,000</button>
+            <button class="spend-button is-hot" type="button" data-nightcall="${consort.id}" ${unlocked ? "" : "disabled"}>夜召独处 50,000</button>
+          </div>
           <p>${consort.title} · ${unlocked ? `好感 ${state.favor[consort.id]} · ${chapter.name}` : consort.unlock}</p>
           <button class="date-button" type="button" data-date="${consort.id}" ${unlocked ? "" : "disabled"}>${unlocked ? "继续他的剧情" : "未解锁"}</button>
         </div>
@@ -1246,11 +1272,93 @@ function sellAsset(assetId) {
   nextMarketMonth();
   checkUnlocks();
   renderAll();
+  if (shouldShowEarnReward()) {
+    showEarnReward();
+    return;
+  }
   if (rankPosition() < beforeRank && shouldShowGenericResult("rank")) {
     showGenericResult("rank", "万国榜上升", "金榜重排，女王之名又向前一步。");
   } else if (shouldShowGenericResult("money")) {
     showGenericResult("money", "国库暴涨", `卖出${asset.name}，入账 ${fmt(gain)} 两。`);
   }
+}
+
+function giveGift(id) {
+  const consort = consorts.find((item) => item.id === id);
+  if (!consort || !state.unlocked[id]) return;
+  const cost = 12000;
+  if (state.wealth < cost) {
+    playSfx("error");
+    toast("国库不足");
+    return;
+  }
+  const beforeChapter = getUnlockedChapterIndex(id);
+  state.wealth -= cost;
+  state.favor[id] = Math.min(100, (state.favor[id] || 0) + 6);
+  state.activity += 2;
+  const afterChapter = getUnlockedChapterIndex(id);
+  if (afterChapter > beforeChapter) {
+    showStoryUnlockBar({ id, name: consort.name, chapter: getChapter(id, afterChapter).name, chapterIndex: afterChapter });
+  }
+  playSfx("affection");
+  toast(`${consort.name} 好感 +6`);
+  saveState();
+  renderAll();
+}
+
+function startNightcall(id) {
+  const consort = consorts.find((item) => item.id === id);
+  if (!consort || !state.unlocked[id]) return;
+  const cost = 50000;
+  if (state.wealth < cost) {
+    playSfx("error");
+    toast("国库不足");
+    return;
+  }
+  const beforeChapter = getUnlockedChapterIndex(id);
+  state.wealth -= cost;
+  state.favor[id] = Math.min(100, (state.favor[id] || 0) + 18);
+  state.activity += 6;
+  state.daily.date = true;
+  const afterChapter = getUnlockedChapterIndex(id);
+  if (afterChapter > beforeChapter) {
+    showStoryUnlockBar({ id, name: consort.name, chapter: getChapter(id, afterChapter).name, chapterIndex: afterChapter });
+  }
+  playBgm(bgmForConsort(id));
+  playSfx("affection");
+  openPlayer(consort.name, "夜色已深，他只向你一人低头。", [
+    { text: "留他独处", action: () => updatePlayerDialog(consort.name, "帘影落下，这一刻不属于朝堂。", [{ text: "收下这夜", action: closePlayer }]) },
+    { text: "轻声唤他", action: () => updatePlayerDialog(consort.name, "他应声靠近，目光比烛火更烫。", [{ text: "收下这夜", action: closePlayer }]) }
+  ], nightcallCg(id), `${consort.name}，今夜只听陛下差遣。`);
+  saveState();
+  renderAll();
+}
+
+function shouldShowEarnReward() {
+  if (state.resultSeen.earnReward) return false;
+  state.resultSeen.earnReward = true;
+  saveState();
+  return true;
+}
+
+function showEarnReward() {
+  const overlay = $("#earnRewardOverlay");
+  const video = $("#earnRewardVideo");
+  const poster = $("#earnRewardPoster");
+  video.pause();
+  video.removeAttribute("src");
+  video.classList.remove("is-ready");
+  poster.onerror = () => {
+    poster.src = `assets/story/nightcalls/shen_earn_reward_01.webp?v=${ASSET_VERSION}`;
+  };
+  poster.src = `assets/story/videos/shen_earn_reward_01_poster.webp?v=${ASSET_VERSION}`;
+  overlay.classList.remove("hidden");
+  playSfx("affection");
+}
+
+function closeEarnReward() {
+  $("#earnRewardOverlay").classList.add("hidden");
+  $("#earnRewardVideo").pause();
 }
 
 function nextMarketMonth() {
@@ -1338,12 +1446,21 @@ function startDate(id, spendResource = true, requestedChapter = getChapterIndex(
 function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id), voiceLine = null) {
   const consort = consorts.find((item) => item.id === id);
   lockPlayerChoices();
-  const wasCurrent = chapterIndex >= getChapterIndex(id);
+  const nextUnwatchedBefore = getNextUnwatchedIndex(id);
+  const unlockedBefore = getUnlockedChapterIndex(id);
+  const wasCurrent = chapterIndex === nextUnwatchedBefore && chapterIndex <= unlockedBefore && !isStoryComplete(id);
   if (wasCurrent) {
+    const beforeChapter = getUnlockedChapterIndex(id);
+    state.favor[id] = Math.min(100, (state.favor[id] || 0) + favor);
     state.story[id] = Math.min(storyChapters[id].length + 1, Math.max(1, state.story[id]) + 1);
+    state.activity += 5;
+    state.daily.date = true;
+    const afterChapter = getUnlockedChapterIndex(id);
+    if (afterChapter > beforeChapter) {
+      showStoryUnlockBar({ id, name: consort.name, chapter: getChapter(id, afterChapter).name, chapterIndex: afterChapter });
+    }
+    saveState();
   }
-  state.activity += 5;
-  state.daily.date = true;
   playSfx("choice");
   const nextIndex = getChapterIndex(id);
   const hasNext = wasCurrent && nextIndex > chapterIndex && nextIndex < storyChapters[id].length;
@@ -1353,7 +1470,7 @@ function finishChoice(id, favor, reply, chapterIndex = getChapterIndex(id), voic
       action: () => {
         playSfx("story");
         closePlayer();
-        if (shouldShowStoryResult(id, chapterIndex)) {
+        if (wasCurrent && shouldShowStoryResult(id, chapterIndex)) {
           showStoryResult(id);
         } else {
           toast("剧情已推进");
@@ -1547,6 +1664,7 @@ function showStoryUnlockBar(unlock) {
   bar.dataset.storyGuide = unlock.id;
   bar.dataset.storyChapter = String(unlock.chapterIndex ?? getUnlockedChapterIndex(unlock.id));
   bar.classList.remove("hidden");
+  playSfx("unlock");
   toast(`新剧情已解锁：${unlock.name}《${unlock.chapter}》`);
   clearTimeout(storyUnlockTimer);
   storyUnlockTimer = setTimeout(() => {
@@ -1630,6 +1748,7 @@ function bindEvents() {
     renderAll();
   });
   $("#resultClose").addEventListener("click", closeStoryResult);
+  $("#earnRewardClose").addEventListener("click", closeEarnReward);
 
   document.body.addEventListener("click", (event) => {
     const tab = event.target.closest("[data-tab]");
@@ -1637,6 +1756,8 @@ function bindEvents() {
     const sell = event.target.closest("[data-sell]");
     const edict = event.target.closest("[data-edict]");
     const date = event.target.closest("[data-date]");
+    const gift = event.target.closest("[data-gift]");
+    const nightcall = event.target.closest("[data-nightcall]");
     const story = event.target.closest("[data-story]");
     const storyGuide = event.target.closest("[data-story-guide]");
     const choice = event.target.closest("[data-choice]");
@@ -1658,6 +1779,8 @@ function bindEvents() {
     if (sell) sellAsset(sell.dataset.sell);
     if (edict) applyEdict(edict.dataset.edict);
     if (date) startDate(date.dataset.date);
+    if (gift) giveGift(gift.dataset.gift);
+    if (nightcall) startNightcall(nightcall.dataset.nightcall);
     if (story) playStory(story.dataset.story, Number(story.dataset.chapter));
     if (choice && playerCallback) playerCallback[Number(choice.dataset.choice)]?.action();
   });
